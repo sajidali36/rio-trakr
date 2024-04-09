@@ -1,0 +1,14 @@
+import React from "react";
+
+const ActivityCard: React.FC = () => {
+  return (
+    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-6 row-span-2">
+      <div className="flex items-center justify-between">
+        <p className="uppercase">Recent Activity</p>
+        <p>...</p>
+      </div>
+    </div>
+  )
+}
+
+export default ActivityCard;
