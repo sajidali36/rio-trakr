@@ -28,10 +28,10 @@ const timeData: Time[] = [
 
 const TimesheetCard: React.FC = () => {
   return (
-    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-6 row-span-2">
+    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-6">
       <div className="flex items-center justify-between">
         <p className="uppercase">Timesheet</p>
-        <p>...</p>
+        <p>&#8942;</p>
       </div>
 
       <div className="grid grid-cols-6 border-stroke py-4.5 dark:border-strokedark sm:grid-cols-8">

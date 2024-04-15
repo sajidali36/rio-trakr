@@ -23,7 +23,7 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
         <div className="uppercase">
           {children}
         </div>
-        <p>...</p>
+        <p>&#8942;</p>
       </div>
 
       <div className="mt-4 flex items-end justify-between">
