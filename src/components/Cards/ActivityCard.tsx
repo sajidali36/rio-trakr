@@ -1,4 +1,5 @@
 import React from "react";
+import data from "../../data/ScreenShots.json";
 
 const ActivityCard: React.FC = () => {
   return (
@@ -7,8 +8,17 @@ const ActivityCard: React.FC = () => {
         <p className="uppercase">Recent Activity</p>
         <p>&#8942;</p>
       </div>
-      <div className="flex items-center justify-center h-100">
-        <p>No activity yet this week.</p>
+      <div className="grid grid-cols-3 gap-6  py-4">
+        {data.map((item, key) => (
+          <div key={key} >
+            <div className="col-span-1 flex items-center">
+              <div className="relative">
+                <img src={item.url} alt="" className="w-40" />
+                <p className="absolute -top-2 -right-2 bg-green-500 py-0.5 px-2 rounded-2xl text-xs text-white">{item.activity}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )

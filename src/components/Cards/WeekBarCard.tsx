@@ -1,4 +1,5 @@
 import React from 'react'
+import WeekBarChart from './WeekBarChart'
 
 const WeekBarCard: React.FC = () => {
   return (
@@ -8,7 +9,8 @@ const WeekBarCard: React.FC = () => {
         <p>&#8942;</p>
       </div>
       <div className="flex items-center justify-center h-100">
-        <p>No time entries for this week yet.</p>
+        <WeekBarChart />
+        {/* <p>No time entries for this week yet.</p> */}
       </div>
     </div>
   )

@@ -1,11 +1,5 @@
 import React from 'react';
 import CardDataStats from '../../components/CardDataStats';
-import ChartOne from '../../components/Charts/ChartOne';
-import ChartThree from '../../components/Charts/ChartThree';
-import ChartTwo from '../../components/Charts/ChartTwo';
-import ChatCard from '../../components/Chat/ChatCard';
-import MapOne from '../../components/Maps/MapOne';
-import TableOne from '../../components/Tables/TableOne';
 import DefaultLayout from '../../layout/DefaultLayout';
 import Period from './Period';
 import ActivityCard from '../../components/Cards/ActivityCard';
@@ -24,7 +18,7 @@ const ECommerce: React.FC = () => {
           <CardDataStats title="Total views" total="55%" rate="0.43%" levelUp>
             Weekly Activity
           </CardDataStats>
-          <CardDataStats title="Total Profit" total="30:45:34" rate="15:40:00" levelUp>
+          <CardDataStats title="Total Profit" total="40:45:34" rate="15:40:00" levelUp>
             Worked this week
           </CardDataStats>
           <CardDataStats title="Total Product" total="2.4k" rate="2.59%" levelUp>

@@ -1,19 +1,39 @@
 import React from 'react'
+import { styled } from '@mui/material/styles';
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
 interface Project {
-  projectName: string,
+  projectName: string
+  activity: string
   time: string
+  barLength: number
 }
+
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+  height: 4,
+  borderRadius: 5,
+  [`&.${linearProgressClasses.colorPrimary}`]: {
+    backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
+  },
+  [`& .${linearProgressClasses.bar}`]: {
+    borderRadius: 5,
+    backgroundColor: theme.palette.mode === 'light' ? '#1a90ff' : '#308fe8',
+  },
+}));
 
 
 const projectData: Project[] = [
   {
     projectName: 'Development',
-    time: '0:10:55'
+    activity: '55%',
+    time: '0:08:55',
+    barLength: 60
   },
   {
     projectName: 'Development',
-    time: '0:10:45'
+    activity: '56%',
+    time: '0:10:45',
+    barLength: 80
   },
 ];
 
@@ -44,11 +64,14 @@ const ProjectsCard: React.FC = () => {
               <p className="text-sm text-black dark:text-white">
                 {item.projectName}
               </p>
-              <p className="bg-green-500 text-white py-0.5 px-2 rounded-2xl">55%</p>
+              <p className="bg-green-500 text-white py-0.5 px-2 rounded-2xl text-xs">{item.activity}</p>
             </div>
           </div>
-          <div className="col-span-2 flex items-center">
+          <div className="col-span-1 flex items-center">
             <p className="text-sm">${item.time}</p>
+          </div>
+          <div className="col-span-2 mt-2">
+            <BorderLinearProgress variant="determinate" value={item.barLength} />
           </div>
         </div>
       ))}
